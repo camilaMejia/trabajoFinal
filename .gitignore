@@ -104,4 +104,4 @@ venv.bak/
 .mypy_cache/
 
 # ignorar fuentes
-*.dat
+data/news/news.dat
