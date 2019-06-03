@@ -1,0 +1,5 @@
+# file: line.toml
+type = "line-corpus"
+store-full-text = true
+encoding = "latin-1"
+
