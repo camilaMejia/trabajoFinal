@@ -1,3 +1,8 @@
+
+cuenta AWS:
+cmejia3 eafit789*
+
+
 ssh -i ~/st01800.pem hadoop@ec2-18-208-213-45.compute-1.amazonaws.com
 sudo su
 passwd hadoop
@@ -16,6 +21,10 @@ python3 -m pip install jupyterhub
 npm install configurable-http-proxy
 python3 -m pip install notebook
 easy_install jinja2 sqlalchemy tornado notebook
-python3 -m pip install pandas pyspark metapy
 
 jupyterhub --port 8080
+
+sudo pip install pandas
+sudo pip install nltk
+sudo python -m nltk.downloader -d /usr/local/share/nltk_data stopwords
+sudo python -m nltk.downloader -d /usr/local/share/nltk_data punkt
