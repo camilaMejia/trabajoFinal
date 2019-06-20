@@ -3,7 +3,7 @@ cuenta AWS:
 cmejia3 eafit789*
 
 
-ssh -i ~/st01800.pem hadoop@ec2-18-208-213-45.compute-1.amazonaws.com
+ssh -i camiMejia.pem hadoop@ec2-54-87-199-49.compute-1.amazonaws.com
 sudo su
 passwd hadoop
 \# poner clave: eafit2019
@@ -22,9 +22,15 @@ npm install configurable-http-proxy
 python3 -m pip install notebook
 easy_install jinja2 sqlalchemy tornado notebook
 
-jupyterhub --port 8080
-
+source deactivate
+cd .. 
 sudo pip install pandas
 sudo pip install nltk
 sudo python -m nltk.downloader -d /usr/local/share/nltk_data stopwords
 sudo python -m nltk.downloader -d /usr/local/share/nltk_data punkt
+sudo python -m nltk.downloader -d /usr/local/share/nltk_data wordnet
+
+cd env
+source bin/activate
+jupyterhub --port 8080
+
