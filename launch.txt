@@ -3,7 +3,7 @@ cuenta AWS:
 cmejia3 eafit789*
 
 
-ssh -i camiMejia.pem hadoop@ec2-54-87-199-49.compute-1.amazonaws.com
+ssh -i camiMejia.pem hadoop@ec2-52-90-60-251.compute-1.amazonaws.com
 sudo su
 passwd hadoop
 \# poner clave: eafit2019
