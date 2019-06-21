@@ -3,7 +3,8 @@ cuenta AWS:
 cmejia3 eafit789*
 
 
-ssh -i camiMejia.pem hadoop@ec2-52-90-60-251.compute-1.amazonaws.com
+ssh -i camiMejia.pem hadoop@ec2-54-90-136-148.compute-1.amazonaws.com
+
 sudo su
 passwd hadoop
 \# poner clave: eafit2019
@@ -25,6 +26,7 @@ easy_install jinja2 sqlalchemy tornado notebook
 source deactivate
 cd .. 
 sudo pip install pandas
+sudo pip install TextBlob
 sudo pip install nltk
 sudo python -m nltk.downloader -d /usr/local/share/nltk_data stopwords
 sudo python -m nltk.downloader -d /usr/local/share/nltk_data punkt
