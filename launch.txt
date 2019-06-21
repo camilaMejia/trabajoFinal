@@ -1,0 +1,38 @@
+
+cuenta AWS:
+cmejia3 eafit789*
+
+
+ssh -i camiMejia.pem hadoop@ec2-54-90-136-148.compute-1.amazonaws.com
+
+sudo su
+passwd hadoop
+\# poner clave: eafit2019
+yum install -y gcc-c++ make
+curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -
+yum install -y nodejs
+yum -y install git
+npm install -g configurable-http-proxy
+su - hadoop
+git clone https://github.com/camilaMejia/trabajoFinal.git
+virtualenv env --python=python3
+cd env
+source bin/activate
+python3 -m pip install jupyterhub
+npm install configurable-http-proxy
+python3 -m pip install notebook
+easy_install jinja2 sqlalchemy tornado notebook
+
+source deactivate
+cd .. 
+sudo pip install pandas
+sudo pip install TextBlob
+sudo pip install nltk
+sudo python -m nltk.downloader -d /usr/local/share/nltk_data stopwords
+sudo python -m nltk.downloader -d /usr/local/share/nltk_data punkt
+sudo python -m nltk.downloader -d /usr/local/share/nltk_data wordnet
+
+cd env
+source bin/activate
+jupyterhub --port 8080
+
